@@ -789,6 +789,158 @@ footer {
 .footer-sub { font-style: italic; }
 
 /* ============================================================
+   STORIES
+   ============================================================ */
+.stories-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.story-card {
+  background: rgba(255,255,255,0.03);
+  padding: 44px 40px;
+  border: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: background 0.22s;
+}
+.story-card:hover { background: rgba(255,255,255,0.055); }
+
+.story-dateline {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.story-heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(20px, 2vw, 26px);
+  color: var(--cream);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.story-body {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(249,245,238,0.72);
+  line-height: 1.85;
+}
+
+.story-outcomes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.story-outcome-item {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.story-outcome-num {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--gold);
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.story-outcome-label {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(249,245,238,0.55);
+  line-height: 1.5;
+}
+
+/* Media row */
+.story-media-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.story-media-block { display: flex; flex-direction: column; gap: 12px; }
+
+.story-media-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.video-embed-placeholder,
+.screenshot-placeholder {
+  border-radius: 6px;
+  border: 1px dashed rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.03);
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-embed-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.video-embed-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.video-placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.video-placeholder-icon {
+  font-size: 24px;
+  color: rgba(249,245,238,0.20);
+}
+
+.video-placeholder-text {
+  font-size: 13px;
+  color: rgba(249,245,238,0.35);
+  line-height: 1.6;
+}
+
+.video-placeholder-note {
+  display: block;
+  font-size: 11px;
+  color: rgba(249,245,238,0.20);
+  font-style: italic;
+}
+
+/* ============================================================
    SCROLL REVEAL ANIMATIONS
    ============================================================ */
 .reveal {
@@ -828,6 +980,8 @@ footer {
     grid-template-columns: 1fr 300px;
     gap: 60px;
   }
+  .stories-grid { grid-template-columns: 1fr; }
+  .story-media-row { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
   .skills-mosaic { grid-template-columns: 1fr 1fr; }
   .skill-block-wide { grid-column: span 2; }
@@ -892,6 +1046,11 @@ footer {
   .exp-block { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
   .exp-block:last-child { border-bottom: none !important; }
   .exp-card-header { flex-direction: column; }
+
+  /* Stories: 1 col */
+  .stories-grid { grid-template-columns: 1fr; }
+  .story-card { padding: 32px 24px; }
+  .story-media-row { grid-template-columns: 1fr; }
 
   /* Projects: 1 col */
   .projects-grid { grid-template-columns: 1fr; }
