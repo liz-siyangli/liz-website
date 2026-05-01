@@ -129,6 +129,13 @@ strong { font-weight: 500; }
   color: var(--navy);
   letter-spacing: -0.01em;
 }
+.nav-logo-sub {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  color: var(--muted);
+  letter-spacing: 0;
+}
 
 .nav-links {
   display: flex;
