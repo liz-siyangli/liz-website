@@ -364,12 +364,13 @@ strong { font-weight: 500; }
   overflow: hidden;
   border: 1px solid var(--border);
   margin-bottom: 20px;
+  height: 500px;
 }
 .about-img {
   width: 100%;
-  aspect-ratio: 2/3;
+  height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 35%;
   display: block;
 }
 
