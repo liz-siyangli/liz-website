@@ -369,11 +369,9 @@ strong { font-weight: 500; }
 
 .about-img {
   width: 100%;
-  height: 480px;
-  object-fit: cover;
-  object-position: center 18%;
+  height: auto;
   display: block;
-  border-radius: 8px;
+  border-radius: 0;
   margin-bottom: 20px;
 }
 
@@ -1249,7 +1247,7 @@ footer {
     gap: 40px;
   }
   .about-photo-col { order: -1; }
-  .about-img { aspect-ratio: 3/2; }
+  .about-img { height: auto; }
   .body-text { max-width: 100%; }
 
   /* Experience grid: 1 col */
