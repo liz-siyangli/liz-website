@@ -705,6 +705,15 @@ strong { font-weight: 500; }
   font-size: 13px;
   color: var(--muted);
 }
+.pub-link {
+  color: inherit;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s, color 0.2s;
+}
+.pub-link:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
 .pub-divider {
   height: 1px;
   background: var(--border);
