@@ -374,6 +374,7 @@ strong { font-weight: 500; }
   height: auto;
   display: block;
   mix-blend-mode: multiply;
+  filter: brightness(1.18);
 }
 
 .about-details { display: flex; flex-direction: column; gap: 16px; }
