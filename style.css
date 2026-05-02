@@ -373,6 +373,7 @@ strong { font-weight: 500; }
   width: 100%;
   height: auto;
   display: block;
+  mix-blend-mode: multiply;
 }
 
 .about-details { display: flex; flex-direction: column; gap: 16px; }
