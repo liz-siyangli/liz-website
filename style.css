@@ -92,6 +92,7 @@ strong { font-weight: 500; }
 
 .bg-cream      { background: var(--cream); }
 .bg-cream-dark { background: var(--cream-dark); }
+.bg-about      { background: #FAF8F4; }
 .bg-navy       { background: var(--navy); }
 .bg-ink        { background: var(--ink); }
 
@@ -372,8 +373,6 @@ strong { font-weight: 500; }
   display: block;
   border-radius: 6px;
   margin-bottom: 20px;
-  -webkit-mask-image: radial-gradient(ellipse 88% 90% at 50% 42%, black 55%, transparent 100%);
-  mask-image: radial-gradient(ellipse 88% 90% at 50% 42%, black 55%, transparent 100%);
 }
 
 .about-details { display: flex; flex-direction: column; gap: 16px; }
