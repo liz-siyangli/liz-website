@@ -366,8 +366,13 @@ strong { font-weight: 500; }
   align-items: start;
 }
 
-.about-photo-frame { display: none; }
-.about-img { display: none; }
+.about-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
 
 .about-details { display: flex; flex-direction: column; gap: 16px; }
 .about-detail-block p {
