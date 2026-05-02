@@ -51,7 +51,7 @@ strong { font-weight: 500; }
    ============================================================ */
 .label {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -131,7 +131,7 @@ strong { font-weight: 500; }
   letter-spacing: -0.01em;
 }
 .nav-logo-sub {
-  font-size: 14px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 300;
   color: var(--muted);
@@ -144,7 +144,7 @@ strong { font-weight: 500; }
 }
 .nav-links a {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--body);
   position: relative;
@@ -261,7 +261,7 @@ strong { font-weight: 500; }
   align-items: center;
   gap: 8px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   color: var(--body);
   background: var(--cream-dark);
@@ -285,7 +285,7 @@ strong { font-weight: 500; }
   background: var(--navy);
   color: var(--white);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   border-radius: 4px;
   transition: background 0.22s;
@@ -298,7 +298,7 @@ strong { font-weight: 500; }
   border: 1px solid var(--navy);
   color: var(--navy);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   border-radius: 4px;
   transition: background 0.22s, color 0.22s;
@@ -351,7 +351,7 @@ strong { font-weight: 500; }
 .stat-fixed { font-size: 18px; }
 .stat-label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.10em;
   text-transform: uppercase;
   color: var(--muted);
@@ -368,12 +368,12 @@ strong { font-weight: 500; }
 }
 
 .about-photo-col {
-  margin-top: 0;
+  margin-top: -30px;
 }
 
 .about-img {
   width: 100%;
-  height: 620px;
+  height: 570px;
   object-fit: cover;
   object-position: center 100%;
   display: block;
@@ -383,7 +383,7 @@ strong { font-weight: 500; }
 
 .about-details { display: flex; flex-direction: column; gap: 10px; }
 .about-detail-block p {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--body);
   margin-top: 4px;
 }
@@ -423,14 +423,14 @@ strong { font-weight: 500; }
   margin-bottom: 4px;
 }
 .exp-meta {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
 }
 .exp-product-link {
   display: inline-block;
   margin-top: 8px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.08em;
   color: var(--gold);
@@ -440,7 +440,7 @@ strong { font-weight: 500; }
 .exp-product-link:hover { border-color: var(--gold); }
 .exp-date {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   white-space: nowrap;
   padding-top: 4px;
@@ -464,7 +464,7 @@ strong { font-weight: 500; }
 
 .exp-block-label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -472,7 +472,7 @@ strong { font-weight: 500; }
   margin-bottom: 10px;
 }
 .exp-block p:not(.exp-block-label) {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--body);
   line-height: 1.7;
 }
@@ -520,7 +520,7 @@ strong { font-weight: 500; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -539,7 +539,7 @@ strong { font-weight: 500; }
   letter-spacing: -0.01em;
 }
 .project-desc {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--body);
   line-height: 1.75;
   flex: 1;
@@ -548,7 +548,7 @@ strong { font-weight: 500; }
 .impact-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .chip {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.06em;
   color: var(--gold);
   border: 1px solid var(--gold-light);
@@ -584,7 +584,7 @@ strong { font-weight: 500; }
 
 .skill-block-label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -592,7 +592,7 @@ strong { font-weight: 500; }
   margin-bottom: 12px;
 }
 .skill-block-content {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: rgba(249,245,238,0.85);
   line-height: 1.8;
@@ -623,18 +623,18 @@ strong { font-weight: 500; }
   margin-bottom: 6px;
 }
 .edu-degree {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--body);
   margin-bottom: 8px;
 }
 .edu-meta {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--gold);
   margin-bottom: 6px;
 }
 .edu-note {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
   font-style: italic;
 }
@@ -661,7 +661,7 @@ strong { font-weight: 500; }
 }
 .gallery-item:hover .gallery-img { transform: scale(1.01); }
 .gallery-caption {
-  font-size: 12px;
+  font-size: 13px;
   font-style: italic;
   color: var(--muted);
   margin-top: 8px;
@@ -679,7 +679,7 @@ strong { font-weight: 500; }
   border: 1px solid var(--border);
   border-radius: 100px;
   padding: 10px 20px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--body);
 }
 
@@ -689,7 +689,7 @@ strong { font-weight: 500; }
 .pub-list { display: flex; flex-direction: column; }
 .pub-item { padding: 28px 0; }
 .pub-authors {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
   margin-bottom: 6px;
 }
@@ -702,7 +702,7 @@ strong { font-weight: 500; }
   margin-bottom: 6px;
 }
 .pub-journal {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
 }
 .pub-link {
@@ -775,19 +775,19 @@ strong { font-weight: 500; }
 .contact-icon { font-size: 22px; }
 .contact-card-label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
 }
 .contact-value {
-  font-size: 14px;
+  font-size: 15px;
   color: rgba(249,245,238,0.80);
   word-break: break-all;
 }
 
 .linkedin-note {
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(249,245,238,0.40);
 }
 .linkedin-placeholder { font-style: italic; }
@@ -808,7 +808,7 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(249,245,238,0.40);
 }
 .footer-inner a { color: rgba(249,245,238,0.55); transition: color 0.2s; }
@@ -826,7 +826,7 @@ footer {
 }
 .trait-pill {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.10em;
   text-transform: uppercase;
@@ -849,7 +849,7 @@ footer {
 }
 .contact-extra-link {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   color: rgba(249,245,238,0.55);
   border-bottom: 1px solid rgba(249,245,238,0.20);
@@ -913,7 +913,7 @@ footer {
 }
 .lecture-list-label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -936,14 +936,14 @@ footer {
   margin-top: 6px;
 }
 .lecture-title {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--ink);
   margin-bottom: 4px;
   line-height: 1.5;
 }
 .lecture-desc {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   line-height: 1.6;
 }
@@ -967,7 +967,7 @@ footer {
   letter-spacing: -0.01em;
 }
 .philosophy-body {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
   color: var(--body);
   line-height: 1.85;
@@ -1005,7 +1005,7 @@ footer {
 }
 .photo-placeholder-text {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.10em;
   text-transform: uppercase;
   color: var(--border);
@@ -1037,7 +1037,7 @@ footer {
 
 .story-dateline {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1055,7 +1055,7 @@ footer {
 }
 
 .story-body {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
   color: rgba(249,245,238,0.72);
   line-height: 1.85;
@@ -1087,7 +1087,7 @@ footer {
 }
 
 .story-outcome-label {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   color: rgba(249,245,238,0.55);
   line-height: 1.5;
@@ -1104,7 +1104,7 @@ footer {
 
 .story-media-label {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.10em;
   text-transform: uppercase;
@@ -1157,14 +1157,14 @@ footer {
 }
 
 .video-placeholder-text {
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(249,245,238,0.35);
   line-height: 1.6;
 }
 
 .video-placeholder-note {
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   color: rgba(249,245,238,0.20);
   font-style: italic;
 }
