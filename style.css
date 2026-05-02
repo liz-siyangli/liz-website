@@ -369,9 +369,11 @@ strong { font-weight: 500; }
 
 .about-img {
   width: 100%;
-  height: auto;
+  height: 480px;
+  object-fit: cover;
+  object-position: center 18%;
   display: block;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
