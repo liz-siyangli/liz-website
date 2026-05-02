@@ -366,16 +366,8 @@ strong { font-weight: 500; }
   align-items: start;
 }
 
-.about-photo-frame {
-  margin-bottom: 20px;
-}
-.about-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  mix-blend-mode: multiply;
-  filter: brightness(1.18);
-}
+.about-photo-frame { display: none; }
+.about-img { display: none; }
 
 .about-details { display: flex; flex-direction: column; gap: 16px; }
 .about-detail-block p {
