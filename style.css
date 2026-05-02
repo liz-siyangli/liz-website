@@ -369,14 +369,19 @@ strong { font-weight: 500; }
 .about-photo-frame {
   border-radius: 8px;
   margin-bottom: 20px;
-  background: var(--cream-dark);
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 4px;
   overflow: hidden;
+  display: inline-block;
+  width: 100%;
 }
 .about-img {
   width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
+  border-radius: 5px;
 }
 
 .about-details { display: flex; flex-direction: column; gap: 16px; }
