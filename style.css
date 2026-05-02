@@ -782,6 +782,83 @@ footer {
 .footer-sub { font-style: italic; }
 
 /* ============================================================
+   TRAIT PILLS (skills section)
+   ============================================================ */
+.traits-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.trait-pill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(184,145,74,0.35);
+  background: rgba(184,145,74,0.08);
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+/* ============================================================
+   CONTACT EXTRA LINKS
+   ============================================================ */
+.contact-extra-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+.contact-extra-link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(249,245,238,0.55);
+  border-bottom: 1px solid rgba(249,245,238,0.20);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.contact-extra-link:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* ============================================================
+   STORY SCREENSHOTS
+   ============================================================ */
+.story-screenshot-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.10);
+  object-fit: cover;
+}
+.story-screenshots-row {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.story-screenshots-header { margin-bottom: 4px; }
+.story-link {
+  color: var(--gold);
+  border-bottom: 1px solid rgba(184,145,74,0.4);
+  font-style: normal;
+  transition: border-color 0.2s;
+}
+.story-link:hover { border-color: var(--gold); }
+.story-screenshots-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ============================================================
    STANFORD CHAPTER
    ============================================================ */
 .stanford-grid {
