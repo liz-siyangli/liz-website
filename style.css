@@ -373,9 +373,9 @@ strong { font-weight: 500; }
 
 .about-img {
   width: 100%;
-  height: 560px;
+  height: 620px;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center 100%;
   display: block;
   border-radius: 0;
   margin-bottom: 8px;
