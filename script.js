@@ -117,9 +117,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
    CUSTOM CURSOR
    ============================================================ */
 (function () {
-  if (window.matchMedia('(pointer: coarse)').matches) return; // skip touch
+  if (!window.matchMedia('(pointer:fine)').matches) return;
 
-  document.body.classList.add('has-cursor');
+  const html = document.documentElement;
+  html.classList.add('has-cursor');
 
   const ring = document.createElement('div');
   ring.className = 'c-cursor';
@@ -128,21 +129,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   document.body.appendChild(ring);
   document.body.appendChild(dot);
 
-  let mx = -100, my = -100, rx = -100, ry = -100;
+  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  let rx = mx, ry = my;
+  let started = false;
 
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
-    dot.style.transform = `translate(${mx}px,${my}px)`;
+    // Exact dot follows immediately
+    dot.style.left = mx + 'px';
+    dot.style.top  = my + 'px';
+    if (!started) {
+      rx = mx; ry = my;
+      ring.classList.add('visible');
+      dot.classList.add('visible');
+      started = true;
+    }
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', () => {
+    ring.classList.remove('visible');
+    dot.classList.remove('visible');
+  });
+  document.addEventListener('mouseenter', () => {
+    if (started) {
+      ring.classList.add('visible');
+      dot.classList.add('visible');
+    }
   });
 
   (function animRing() {
-    rx += (mx - rx) * 0.13;
-    ry += (my - ry) * 0.13;
-    ring.style.transform = `translate(${rx}px,${ry}px)`;
+    rx += (mx - rx) * 0.11;
+    ry += (my - ry) * 0.11;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
     requestAnimationFrame(animRing);
   })();
 
-  document.querySelectorAll('a,button,.door-card,.project-card,.edu-card,.contact-card').forEach(el => {
+  const hoverSel = 'a, button, [role="button"], .door-card, .project-card, .edu-card, .contact-card, .story-card';
+  document.querySelectorAll(hoverSel).forEach(el => {
     el.addEventListener('mouseenter', () => ring.classList.add('hover'));
     el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
   });
@@ -162,21 +186,6 @@ document.querySelectorAll('.door-card').forEach(card => {
   });
   card.addEventListener('mouseleave', () => {
     bg.style.transform = '';
-  });
-});
-
-/* ============================================================
-   STORY ACCORDION
-   ============================================================ */
-document.querySelectorAll('.story-accordion').forEach(article => {
-  const btn = article.querySelector('.story-expand-btn');
-  const wrap = article.querySelector('.story-body-wrap');
-  if (!btn || !wrap) return;
-  btn.addEventListener('click', () => {
-    const open = wrap.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open);
-    btn.childNodes[0].textContent = open ? 'Collapse ↑ ' : 'Read the full story ';
-    btn.querySelector('.story-expand-arrow').style.transform = open ? 'rotate(180deg)' : '';
   });
 });
 
