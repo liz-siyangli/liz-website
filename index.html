@@ -21,7 +21,6 @@
         <a href="#stories">Stories</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#stanford">Stanford</a>
         <a href="#contact">Contact</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -34,7 +33,6 @@
       <a href="#stories" class="mobile-link">Stories</a>
       <a href="#projects" class="mobile-link">Projects</a>
       <a href="#skills" class="mobile-link">Skills</a>
-      <a href="#stanford" class="mobile-link">Stanford</a>
       <a href="#contact" class="mobile-link">Contact</a>
     </div>
   </nav>
@@ -90,7 +88,52 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- SCENE CARDS -->
+  <section id="scenes" class="scenes-section">
+    <div class="scenes-grid">
+
+      <div class="scene-card" data-scene="stanford">
+        <div class="scene-bg scene-bg-stanford"></div>
+        <div class="scene-overlay">
+          <p class="scene-dateline">Jan – Jun 2026 · Stanford University</p>
+          <h3 class="scene-title">After the startup.</h3>
+          <p class="scene-sub">Staying current on my own terms.</p>
+          <span class="scene-cta">Explore →</span>
+        </div>
+      </div>
+
+      <div class="scene-card" data-scene="goodhumans">
+        <div class="scene-bg scene-bg-goodhumans"></div>
+        <div class="scene-overlay">
+          <p class="scene-dateline">Jul 2025 – Jan 2026 · San Francisco</p>
+          <h3 class="scene-title">Good Humans.</h3>
+          <p class="scene-sub">First employee. Accelerator to seed.</p>
+          <span class="scene-cta">Explore →</span>
+        </div>
+      </div>
+
+      <div class="scene-card" data-scene="field">
+        <div class="scene-bg scene-bg-field"></div>
+        <div class="scene-overlay">
+          <p class="scene-dateline">Oct – Dec 2025 · New York & SF</p>
+          <h3 class="scene-title">In the field.</h3>
+          <p class="scene-sub">NYC. Sold out in five minutes.</p>
+          <span class="scene-cta">Explore →</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SCENE MODAL -->
+  <div class="scene-modal-backdrop" id="sceneModalBackdrop">
+    <div class="scene-modal" id="sceneModal">
+      <button class="scene-modal-close" id="sceneModalClose">✕</button>
+      <div class="scene-modal-body" id="sceneModalBody">
+        <!-- content injected by JS -->
+      </div>
+    </div>
+  </div>
   <section id="about" class="bg-about">
     <div class="section-inner">
       <div class="about-grid">
@@ -651,5 +694,51 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Scene card modal
+    const sceneContent = {
+      stanford: {
+        label: 'Jan – Jun 2026 · Stanford University',
+        heading: 'After the startup.',
+        body: 'Placeholder — Stanford content coming soon. Photos, lectures, and what it meant to stay current after leaving Good Humans.'
+      },
+      goodhumans: {
+        label: 'Jul 2025 – Jan 2026 · San Francisco',
+        heading: 'Good Humans.',
+        body: 'Placeholder — Good Humans content coming soon. First employee, accelerator to seed, everything built from scratch.'
+      },
+      field: {
+        label: 'Oct – Dec 2025 · New York & SF',
+        heading: 'In the field.',
+        body: 'Placeholder — NYC & pre-sale content coming soon. The sold-out convention, the 15-day sprint, five minutes to sell out.'
+      }
+    };
+
+    const backdrop = document.getElementById('sceneModalBackdrop');
+    const modalBody = document.getElementById('sceneModalBody');
+    const closeBtn = document.getElementById('sceneModalClose');
+
+    document.querySelectorAll('.scene-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const key = card.dataset.scene;
+        const c = sceneContent[key];
+        modalBody.innerHTML = `
+          <p class="scene-modal-label">${c.label}</p>
+          <h2 class="scene-modal-heading">${c.heading}</h2>
+          <div class="scene-modal-placeholder">${c.body}</div>
+        `;
+        backdrop.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    const closeModal = () => {
+      backdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  </script>
 </body>
 </html>
