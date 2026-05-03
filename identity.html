@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Who I Am · Liz Li</title>
+  <title>The Person · Liz Li</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
     <div class="section-inner subpage-header-inner">
       <a href="index.html" class="subpage-back">← Back</a>
       <p class="label">Who I Am · How I Think</p>
-      <h1 class="subpage-title">Beyond the résumé.</h1>
+      <h1 class="subpage-title">The Person.</h1>
     </div>
   </section>
 
@@ -50,32 +50,37 @@
       <div class="about-grid">
         <div class="about-text">
           <p class="label reveal">About</p>
-          <h2 class="section-title reveal">I think in systems.<br>I build from scratch.</h2>
-          <p class="body-text reveal">
-            I was the first employee at Good Humans — an AI hardware startup that went from
-            accelerator to seed funding in under six months. With no playbook and no team,
-            I built the company's marketing engine, operations infrastructure, and growth
-            systems entirely from scratch. I replaced entire categories of repetitive work
-            with AI agents, LLM pipelines, and custom internal tooling — shipped two
-            consumer features end-to-end, ran 500+ user surveys and interviews, and grew a community
-            of 3,500+, all while the role was still being defined around me.
-          </p>
-          <p class="body-text reveal">
-            Before tech, I spent five years at Beijing University of Chinese Medicine —
-            including two years of clinical training at one of the best hospitals in China.
-            That kind of training instills things that don't show up on a résumé: scientific
-            rigor, a high tolerance for pressure without shortcuts, and the discipline to
-            document, verify, and iterate. I went on to earn a Bachelor's degree with a focus on
-            Management Information Systems, then an M.S. in Computer Science from
-            Northeastern University. The cross-disciplinary background isn't a detour —
-            it's the reason I think more carefully about systems, and move faster when it
-            matters.
-          </p>
-          <p class="body-text reveal">
-            The things I've learned to trust: constraints force clarity. Urgency reveals
-            character. And the most useful work usually starts before anyone's written a
-            job description.
-          </p>
+          <h2 class="about-hook-quote reveal">I think in systems.<br>I build from scratch.</h2>
+          <button class="about-read-btn reveal" id="aboutReadBtn" aria-expanded="false">
+            Read more <span class="about-read-arrow">↓</span>
+          </button>
+          <div class="about-body-wrap" id="aboutBodyWrap">
+            <p class="body-text">
+              I was the first employee at Good Humans — an AI hardware startup that went from
+              accelerator to seed funding in under six months. With no playbook and no team,
+              I built the company's marketing engine, operations infrastructure, and growth
+              systems entirely from scratch. I replaced entire categories of repetitive work
+              with AI agents, LLM pipelines, and custom internal tooling — shipped two
+              consumer features end-to-end, ran 500+ user surveys and interviews, and grew a community
+              of 3,500+, all while the role was still being defined around me.
+            </p>
+            <p class="body-text">
+              Before tech, I spent five years at Beijing University of Chinese Medicine —
+              including two years of clinical training at one of the best hospitals in China.
+              That kind of training instills things that don't show up on a résumé: scientific
+              rigor, a high tolerance for pressure without shortcuts, and the discipline to
+              document, verify, and iterate. I went on to earn a Bachelor's degree with a focus on
+              Management Information Systems, then an M.S. in Computer Science from
+              Northeastern University. The cross-disciplinary background isn't a detour —
+              it's the reason I think more carefully about systems, and move faster when it
+              matters.
+            </p>
+            <p class="body-text">
+              The things I've learned to trust: constraints force clarity. Urgency reveals
+              character. And the most useful work usually starts before anyone's written a
+              job description.
+            </p>
+          </div>
         </div>
         <div class="about-photo-col">
           <img src="assets/images/BDCDB87C-CF62-4EA3-851F-842F9DF94971.JPG" alt="Liz Li graduation portrait" class="about-img reveal">
@@ -114,7 +119,11 @@
           </p>
 
           <div class="lecture-list reveal">
-            <p class="lecture-list-label">Five I keep thinking about</p>
+            <button class="lecture-list-toggle" id="lectureToggle" aria-expanded="false">
+              <span class="lecture-list-label" style="margin-bottom:0">Five I keep thinking about</span>
+              <span class="lecture-toggle-icon">+</span>
+            </button>
+            <div class="lecture-items-wrap" id="lectureItemsWrap">
 
             <div class="lecture-item">
               <span class="lecture-dot"></span>
@@ -155,6 +164,8 @@
                 <p class="lecture-desc">NVIDIA's founder and CEO in conversation with Ro Khanna on the forces shaping the next decade of AI.</p>
               </div>
             </div>
+
+            </div><!-- /lecture-items-wrap -->
           </div>
 
           <div class="philosophy-block reveal">
@@ -257,5 +268,29 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // About expand/collapse
+    const aboutBtn = document.getElementById('aboutReadBtn');
+    const aboutWrap = document.getElementById('aboutBodyWrap');
+    if (aboutBtn && aboutWrap) {
+      aboutBtn.addEventListener('click', () => {
+        const open = aboutWrap.classList.toggle('open');
+        aboutBtn.setAttribute('aria-expanded', open);
+        aboutBtn.querySelector('.about-read-arrow').style.transform = open ? 'rotate(180deg)' : '';
+        aboutBtn.childNodes[0].textContent = open ? 'Read less ' : 'Read more ';
+      });
+    }
+
+    // Lecture list expand/collapse
+    const lectureBtn = document.getElementById('lectureToggle');
+    const lectureWrap = document.getElementById('lectureItemsWrap');
+    if (lectureBtn && lectureWrap) {
+      lectureBtn.addEventListener('click', () => {
+        const open = lectureWrap.classList.toggle('open');
+        lectureBtn.setAttribute('aria-expanded', open);
+        lectureBtn.querySelector('.lecture-toggle-icon').textContent = open ? '−' : '+';
+      });
+    }
+  </script>
 </body>
 </html>
