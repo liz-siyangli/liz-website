@@ -51,7 +51,7 @@ strong { font-weight: 500; }
    ============================================================ */
 .label {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -661,7 +661,7 @@ strong { font-weight: 500; }
 }
 .gallery-item:hover .gallery-img { transform: scale(1.01); }
 .gallery-caption {
-  font-size: 13px;
+  font-size: 15px;
   font-style: italic;
   color: var(--muted);
   margin-top: 8px;
