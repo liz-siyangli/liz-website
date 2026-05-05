@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=person-poster-full">
 </head>
 <body>
 
@@ -38,14 +38,14 @@
   <!-- SUBPAGE HEADER -->
   <section class="subpage-header bg-about">
     <div class="section-inner subpage-header-inner">
-      <a href="index.html" class="subpage-back">← Back</a>
+      <a href="./index.html" class="subpage-back">← Back</a>
       <p class="label">Who I Am · How I Think</p>
       <h1 class="subpage-title">The Person.</h1>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="bg-about">
+  <section id="about" class="bg-about person-about-section">
     <div class="section-inner">
       <div class="about-grid">
         <div class="about-text">
@@ -65,39 +65,28 @@
               <p>Product · Growth · Marketing · AI Automation · Community</p>
             </div>
           </div>
-          <button class="about-read-btn reveal" id="aboutReadBtn" aria-expanded="false">
-            Read more <span class="about-read-arrow">↓</span>
-          </button>
-          <div class="about-body-wrap" id="aboutBodyWrap">
-            <p class="body-text">
-              I was the first employee at Good Humans — an AI hardware startup that went from
-              accelerator to seed funding in under six months. With no playbook and no team,
-              I built the company's marketing engine, operations infrastructure, and growth
-              systems entirely from scratch. I replaced entire categories of repetitive work
-              with AI agents, LLM pipelines, and custom internal tooling — shipped two
-              consumer features end-to-end, ran 500+ user surveys and interviews, and grew a community
-              of 3,500+, all while the role was still being defined around me.
-            </p>
-            <p class="body-text">
-              Before tech, I spent five years at Beijing University of Chinese Medicine —
-              including two years of clinical training at one of the best hospitals in China.
-              That kind of training instills things that don't show up on a résumé: scientific
-              rigor, a high tolerance for pressure without shortcuts, and the discipline to
-              document, verify, and iterate. I went on to earn a Bachelor's degree with a focus on
-              Management Information Systems, then an M.S. in Computer Science from
-              Northeastern University. The cross-disciplinary background isn't a detour —
-              it's the reason I think more carefully about systems, and move faster when it
-              matters.
-            </p>
-            <p class="body-text">
-              The things I've learned to trust: constraints force clarity. Urgency reveals
-              character. And the most useful work usually starts before anyone's written a
-              job description.
-            </p>
-          </div>
         </div>
-        <div class="about-photo-col">
-          <img src="assets/images/BDCDB87C-CF62-4EA3-851F-842F9DF94971.JPG" alt="Liz Li graduation portrait" class="about-img reveal">
+        <div class="about-photo-col about-art-col">
+          <div class="portrait-stage reveal" id="portraitStage">
+            <button class="portrait-card" id="portraitCard" type="button" aria-expanded="false" aria-label="Open portrait story">
+              <span class="portrait-card-inner">
+                <span class="portrait-face portrait-front">
+                  <img src="assets/images/person-graduation-poster.jpg?v=2" alt="Illustrated portrait celebrating Liz Li's Northeastern University journey" class="about-art-img">
+                  <span class="portrait-corner" aria-hidden="true"></span>
+                  <span class="portrait-glow-ring" aria-hidden="true"></span>
+                </span>
+                <span class="portrait-face portrait-back">
+                  <span class="label">About Me</span>
+                  <span class="portrait-story-copy">
+                    <span>I was the first employee at Good Humans — an AI hardware startup that went from accelerator to seed funding in under six months. With no playbook and no team, I built the company's marketing engine, operations infrastructure, and growth systems entirely from scratch.</span>
+                    <span>I replaced entire categories of repetitive work with AI agents, LLM pipelines, and custom internal tooling — shipped two consumer features end-to-end, ran 500+ user surveys and interviews, and grew a community of 3,500+, all while the role was still being defined around me.</span>
+                    <span>Before tech, I spent five years at Beijing University of Chinese Medicine, including two years of clinical training. That cross-disciplinary background isn't a detour — it's the reason I think carefully about systems, and move faster when it matters.</span>
+                  </span>
+                  <span class="portrait-close-hint">Click again to close</span>
+                </span>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -269,15 +258,28 @@
 
   <script src="script.js"></script>
   <script>
-    // About expand/collapse
-    const aboutBtn = document.getElementById('aboutReadBtn');
-    const aboutWrap = document.getElementById('aboutBodyWrap');
-    if (aboutBtn && aboutWrap) {
-      aboutBtn.addEventListener('click', () => {
-        const open = aboutWrap.classList.toggle('open');
-        aboutBtn.setAttribute('aria-expanded', open);
-        aboutBtn.querySelector('.about-read-arrow').style.transform = open ? 'rotate(180deg)' : '';
-        aboutBtn.childNodes[0].textContent = open ? 'Read less ' : 'Read more ';
+    const portraitStage = document.getElementById('portraitStage');
+    const portraitCard = document.getElementById('portraitCard');
+    if (portraitStage && portraitCard) {
+      const closePortrait = () => {
+        portraitStage.classList.remove('expanded');
+        portraitCard.setAttribute('aria-expanded', 'false');
+      };
+      const openPortrait = () => {
+        portraitStage.classList.add('expanded');
+        portraitCard.setAttribute('aria-expanded', 'true');
+      };
+      portraitCard.addEventListener('click', () => {
+        if (portraitStage.classList.contains('expanded')) {
+          closePortrait();
+        } else {
+          openPortrait();
+        }
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && portraitStage.classList.contains('expanded')) {
+          closePortrait();
+        }
       });
     }
 

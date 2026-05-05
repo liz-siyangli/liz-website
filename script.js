@@ -114,65 +114,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /* ============================================================
-   CUSTOM CURSOR
-   ============================================================ */
-(function () {
-  if (!window.matchMedia('(pointer:fine)').matches) return;
-
-  const html = document.documentElement;
-  html.classList.add('has-cursor');
-
-  const ring = document.createElement('div');
-  ring.className = 'c-cursor';
-  const dot = document.createElement('div');
-  dot.className = 'c-cursor-dot';
-  document.body.appendChild(ring);
-  document.body.appendChild(dot);
-
-  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  let rx = mx, ry = my;
-  let started = false;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    // Exact dot follows immediately
-    dot.style.left = mx + 'px';
-    dot.style.top  = my + 'px';
-    if (!started) {
-      rx = mx; ry = my;
-      ring.classList.add('visible');
-      dot.classList.add('visible');
-      started = true;
-    }
-  }, { passive: true });
-
-  document.addEventListener('mouseleave', () => {
-    ring.classList.remove('visible');
-    dot.classList.remove('visible');
-  });
-  document.addEventListener('mouseenter', () => {
-    if (started) {
-      ring.classList.add('visible');
-      dot.classList.add('visible');
-    }
-  });
-
-  (function animRing() {
-    rx += (mx - rx) * 0.11;
-    ry += (my - ry) * 0.11;
-    ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
-    requestAnimationFrame(animRing);
-  })();
-
-  const hoverSel = 'a, button, [role="button"], .door-card, .project-card, .edu-card, .contact-card, .story-card';
-  document.querySelectorAll(hoverSel).forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-  });
-})();
-
-/* ============================================================
    DOOR PARALLAX on mousemove
    ============================================================ */
 document.querySelectorAll('.door-card').forEach(card => {
@@ -186,19 +127,5 @@ document.querySelectorAll('.door-card').forEach(card => {
   });
   card.addEventListener('mouseleave', () => {
     bg.style.transform = '';
-  });
-});
-
-/* ============================================================
-   PAGE TRANSITIONS
-   ============================================================ */
-document.querySelectorAll('a[href]').forEach(link => {
-  const href = link.getAttribute('href');
-  if (!href || href.startsWith('#') || href.startsWith('mailto:') ||
-      href.startsWith('tel:') || link.target === '_blank') return;
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    document.body.classList.add('page-out');
-    setTimeout(() => { window.location.href = href; }, 260);
   });
 });

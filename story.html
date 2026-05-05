@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=field-results-1">
 </head>
 <body>
 
@@ -43,7 +43,7 @@
   <!-- SUBPAGE HEADER -->
   <section class="subpage-header bg-cream">
     <div class="section-inner subpage-header-inner">
-      <a href="index.html" class="subpage-back">← Back</a>
+      <a href="./index.html" class="subpage-back">← Back</a>
       <p class="label">Experience · Work · Projects</p>
       <h1 class="subpage-title">The Work.</h1>
     </div>
@@ -115,77 +115,90 @@
   </section>
 
   <!-- STORIES -->
-  <section id="stories" class="bg-ink">
+  <section id="stories" class="bg-ink field-section">
     <div class="section-inner">
-      <p class="label label-gold reveal">From the field</p>
-      <h2 class="section-title section-title-cream reveal">6 months on the<br>founding team.<br><em>Two things worth sharing.</em></h2>
+      <div class="field-index">
+        <p class="label label-gold reveal">From the field</p>
+        <h2 class="section-title section-title-cream reveal">6 Months on the<br>Founding Team</h2>
 
-      <div class="stories-grid">
+        <div class="story-screenshots-row reveal">
+          <div class="story-screenshots-header">
+            <p class="story-media-label">Content results · <a href="https://www.tiktok.com/@lucie_luv_" target="_blank" rel="noopener noreferrer" class="story-link">@lucie_luv_ on TikTok ↗</a></p>
+          </div>
+          <div class="story-screenshots-grid">
+            <img src="assets/images/IMG_6620.JPG" alt="TikTok video screenshot" class="story-screenshot-img">
+            <img src="assets/images/IMG_6621.JPG" alt="TikTok video screenshot" class="story-screenshot-img">
+            <img src="assets/images/IMG_6622.JPG" alt="TikTok video screenshot" class="story-screenshot-img">
+          </div>
+          <div class="content-results-summary">
+            <p class="content-results-kicker">AI-assisted content pipeline</p>
+            <p>I built a repeatable short-form system around AI scripting, SOP-driven editing, batch publishing, creator coordination, and performance feedback loops. The output: 200+ owned-channel videos, multiple 500K+ breakout posts, 3M+ total views, and 50+ creator partnerships. The strongest market signal was audience quality: U.S. audience share moved from 23% to 73%.</p>
+          </div>
+        </div>
 
-        <article class="story-card reveal">
-          <p class="story-dateline">New York · October 2025</p>
-          <h3 class="story-heading">An urgent trip to a sold-out convention — and a single offhand comment that became a product.</h3>
-          <div class="story-outcomes">
-            <div class="story-outcome-item">
-              <span class="story-outcome-num">500</span>
-              <span class="story-outcome-label">new community members from this event alone — highest purchase-intent cohort we tracked</span>
-            </div>
-            <div class="story-outcome-item">
-              <span class="story-outcome-num">70%+</span>
-              <span class="story-outcome-label">of Batch 2 buyers added Matching Outfit at $100+ · every restock since has sold out in under 5 min</span>
+        <div class="story-media-row results-media-row">
+          <div class="story-media-block reveal">
+            <p class="story-media-label">New York · Documentary</p>
+            <div class="video-embed-wrap">
+              <video controls preload="metadata" class="story-video">
+                <source src="assets/images/VID_20260501224642766.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
-          <button class="story-expand-btn" data-story="ny">
-            Read the full story →
-          </button>
+          <div class="story-media-block reveal">
+            <p class="story-media-label">December 24 · Sold Out Fast</p>
+            <img src="assets/images/IMG_0251.jpg" alt="Pre-order sold out confirmation" class="story-screenshot-img">
+          </div>
+        </div>
+
+        <div class="stories-grid">
+
+          <article class="story-card reveal field-note-card">
+            <p class="story-dateline">New York · October 2025</p>
+            <h3 class="story-heading">An urgent trip to a sold-out convention — and a single offhand comment that became a product.</h3>
+            <div class="story-outcomes">
+              <div class="story-outcome-item">
+                <span class="story-outcome-num">500</span>
+                <span class="story-outcome-label">new community members from this event alone — highest purchase-intent cohort we tracked</span>
+              </div>
+              <div class="story-outcome-item">
+                <span class="story-outcome-num">70%+</span>
+                <span class="story-outcome-label">of Batch 2 buyers added Matching Outfit at $100+ · every restock since has sold out in under 5 min</span>
+              </div>
+            </div>
+            <button class="field-note-trigger" type="button" data-field-note="ny">See what happened</button>
+          </article>
+
+          <article class="story-card reveal field-note-card">
+            <p class="story-dateline">San Francisco · December 2025</p>
+            <h3 class="story-heading">Funding Season. Fifteen days to build the pre-sale. Five minutes to sell out.</h3>
+            <div class="story-outcomes">
+              <div class="story-outcome-item">
+                <span class="story-outcome-num">5 min</span>
+                <span class="story-outcome-label">to sell 100 units on Dec 24 · investors saw the data the same night</span>
+              </div>
+              <div class="story-outcome-item">
+                <span class="story-outcome-num">30 videos</span>
+                <span class="story-outcome-label">in 15 days · scripted, shot, edited, published, and tracked — solo</span>
+              </div>
+            </div>
+            <button class="field-note-trigger" type="button" data-field-note="sf">See what happened</button>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="field-note-overlay" id="fieldNoteOverlay" aria-hidden="true">
+        <button class="field-note-scrim" type="button" id="fieldNoteScrim" aria-label="Close field note"></button>
+        <article class="field-note-panel" role="dialog" aria-modal="true" aria-labelledby="fieldNoteTitle">
+          <button class="field-note-close" type="button" id="fieldNoteClose">Close</button>
+          <p class="story-dateline" id="fieldNoteDateline"></p>
+          <h3 class="field-note-title" id="fieldNoteTitle"></h3>
+          <div class="field-note-body" id="fieldNoteBody"></div>
         </article>
-
-        <article class="story-card reveal">
-          <p class="story-dateline">San Francisco · December 2025</p>
-          <h3 class="story-heading">Funding Season. Fifteen days to build the pre-sale. Five minutes to sell out.</h3>
-          <div class="story-outcomes">
-            <div class="story-outcome-item">
-              <span class="story-outcome-num">5 min</span>
-              <span class="story-outcome-label">to sell 100 units on Dec 24 · investors saw the data the same night</span>
-            </div>
-            <div class="story-outcome-item">
-              <span class="story-outcome-num">30 videos</span>
-              <span class="story-outcome-label">in 15 days · scripted, shot, edited, published, and tracked — solo</span>
-            </div>
-          </div>
-          <button class="story-expand-btn" data-story="sf">
-            Read the full story →
-          </button>
-        </article>
-
       </div>
 
-      <div class="story-media-row">
-        <div class="story-media-block reveal">
-          <p class="story-media-label">New York · Documentary</p>
-          <div class="video-embed-wrap">
-            <video controls preload="metadata" class="story-video">
-              <source src="assets/images/VID_20260501224642766.mov" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-        <div class="story-media-block reveal">
-          <p class="story-media-label">December 24 · Sold Out Fast</p>
-          <img src="assets/images/IMG_0251.jpg" alt="Pre-order sold out confirmation" class="story-screenshot-img">
-        </div>
-      </div>
-
-      <div class="story-screenshots-row reveal">
-        <div class="story-screenshots-header">
-          <p class="story-media-label">Content results · <a href="https://www.tiktok.com/@lucie_luv_" target="_blank" rel="noopener noreferrer" class="story-link">@lucie_luv_ on TikTok ↗</a></p>
-        </div>
-        <div class="story-screenshots-grid">
-          <img src="assets/images/IMG_6620.JPG" alt="TikTok video screenshot" class="story-screenshot-img">
-          <img src="assets/images/IMG_6621.JPG" alt="TikTok video screenshot" class="story-screenshot-img">
-          <img src="assets/images/IMG_6622.JPG" alt="TikTok video screenshot" class="story-screenshot-img">
-        </div>
-      </div>
     </div>
   </section>
 
@@ -414,60 +427,72 @@
     </div>
   </footer>
 
-  <!-- STORY MODAL -->
-  <div class="story-modal-backdrop" id="storyModalBackdrop">
-    <div class="story-modal" id="storyModal" role="dialog" aria-modal="true">
-      <button class="story-modal-close" id="storyModalClose" aria-label="Close">✕</button>
-      <div class="story-modal-inner" id="storyModalInner"></div>
-    </div>
-  </div>
-
   <script src="script.js"></script>
   <script>
-    const storyContent = {
+    const fieldNotes = {
       ny: {
         dateline: 'New York · October 2025',
-        heading: 'An urgent trip to a sold-out convention — and a single offhand comment that became a product.',
-        body: `<p>By October 2025, Good Humans had moved fast. We'd closed a round and were entering real production — not prototype, not lab, factory. Our manufacturing co-founder needed to fly to China to oversee the first production run in person. But before she left, we had a problem: we didn't have enough direct user feedback to tell her what she'd be asking the factory to build. The time window was under a week.</p>
-<p>I found the right room: a Love and Deep Space fan event in New York — a birthday celebration for the character Xavier, the biggest gathering of its kind on the East Coast, drawing fans from Philly, Boston, up and down the coast. Vendor slots had been closed for months. I reached out anyway. Explained who we were, what we were building, why our presence would matter to the people in that room. We got added to a sold-out lineup.</p>
-<p>For seven days I ran interviews everywhere — in the coffee queue before doors opened, on the show floor, in a private room I unlocked after buying the sign-in volunteer a coffee. Our manufacturing co-founder flew in. She sat across from the people who would become our first customers and got the direct answers she'd be bringing to the factory.</p>
-<p>In one of those conversations, a user mentioned she wanted her AI companion to wear matching outfits. I didn't let it go. I heard variations of it again. I ran a Discord poll — the signal held. I brought it to the team formally. The co-founders pushed back: we're an AI startup from San Francisco, this feels too low-tech. I showed them the data. Matching Outfit launched.</p>`
+        title: 'An urgent trip to a sold-out convention — and a single offhand comment that became a product.',
+        paragraphs: [
+          'By October 2025, Good Humans had moved fast. We had closed a round and were entering real production — not prototype, not lab, factory. Our manufacturing co-founder needed to fly to China to oversee the first production run in person. But before she left, we had a problem: we did not have enough direct user feedback to tell her what she would be asking the factory to build. The time window was under a week.',
+          'I found the right room: a Love and Deep Space fan event in New York — a birthday celebration for the character Xavier, the biggest gathering of its kind on the East Coast, drawing fans from Philly, Boston, up and down the coast. Vendor slots had been closed for months. I reached out anyway. Explained who we were, what we were building, why our presence would matter to the people in that room. We got added to a sold-out lineup.',
+          'For seven days I ran interviews everywhere — in the coffee queue before doors opened, on the show floor, in a private room I unlocked after buying the sign-in volunteer a coffee. Our manufacturing co-founder flew in. She sat across from the people who would become our first customers and got the direct answers she would be bringing to the factory.',
+          'In one of those conversations, a user mentioned she wanted her AI companion to wear matching outfits. I did not let it go. I heard variations of it again. I ran a Discord poll — the signal held. I brought it to the team formally. The co-founders pushed back: we are an AI startup from San Francisco, this feels too low-tech. I showed them the data. Matching Outfit launched.'
+        ]
       },
       sf: {
         dateline: 'San Francisco · December 2025',
-        heading: 'Funding Season. Fifteen days to build the pre-sale. Five minutes to sell out.',
-        body: `<p>December 9th. Pre-sale: December 24th. We were in the middle of Funding Season — investors were watching, and this launch would be part of the story they were evaluating. It needed to go well. Not just okay. Well.</p>
-<p>I mapped out a full content calendar before touching the camera. Thirty videos in fifteen days — roughly two a day — each with a call to action calibrated to how many days remained before launch. I coordinated daily with our designer on countdown visuals. I synced with our manufacturing co-founder in China for the latest footage from the factory floor. And while doing all of that, I noticed no one had built the Sold Out page. I built it before anyone asked.</p>
-<p>December 24th. San Francisco. 5pm PST. The office had lost power earlier that day. We drove through the rain looking for a café with wifi. Found one. Opened the backend. Watched. Five minutes. All 100 units gone. Discord exploded — thousands of messages in those same five minutes. People saying what they bought, what outfit they'd pair it with, where they'd put it in their apartment.</p>
-<p>The investors saw the data that same night. That's what fifteen days of focused work looks like when the pressure is real and the stakes are clear.</p>`
+        title: 'Funding Season. Fifteen days to build the pre-sale. Five minutes to sell out.',
+        paragraphs: [
+          'December 9th. Pre-sale: December 24th. We were in the middle of Funding Season — investors were watching, and this launch would be part of the story they were evaluating. It needed to go well. Not just okay. Well.',
+          'I mapped out a full content calendar before touching the camera. Thirty videos in fifteen days — roughly two a day — each with a call to action calibrated to how many days remained before launch. I coordinated daily with our designer on countdown visuals. I synced with our manufacturing co-founder in China for the latest footage from the factory floor. And while doing all of that, I noticed no one had built the Sold Out page. I built it before anyone asked.',
+          'December 24th. San Francisco. 5pm PST. The office had lost power earlier that day. We drove through the rain looking for a cafe with wifi. Found one. Opened the backend. Watched. Five minutes. All 100 units gone. Discord exploded — thousands of messages in those same five minutes. People saying what they bought, what outfit they would pair it with, where they would put it in their apartment.',
+          'The investors saw the data that same night. That is what fifteen days of focused work looks like when the pressure is real and the stakes are clear.'
+        ]
       }
     };
 
-    const backdrop = document.getElementById('storyModalBackdrop');
-    const inner = document.getElementById('storyModalInner');
-    const closeBtn = document.getElementById('storyModalClose');
+    const fieldNoteOverlay = document.getElementById('fieldNoteOverlay');
+    const fieldNoteDateline = document.getElementById('fieldNoteDateline');
+    const fieldNoteTitle = document.getElementById('fieldNoteTitle');
+    const fieldNoteBody = document.getElementById('fieldNoteBody');
+    const fieldNoteClose = document.getElementById('fieldNoteClose');
+    const fieldNoteScrim = document.getElementById('fieldNoteScrim');
 
-    document.querySelectorAll('.story-expand-btn[data-story]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const key = btn.dataset.story;
-        const c = storyContent[key];
-        inner.innerHTML = `
-          <p class="story-modal-dateline">${c.dateline}</p>
-          <h2 class="story-modal-heading">${c.heading}</h2>
-          <div class="story-modal-body">${c.body}</div>
-        `;
-        backdrop.classList.add('open');
-        document.body.style.overflow = 'hidden';
+    function openFieldNote(key) {
+      const note = fieldNotes[key];
+      if (!note) return;
+      fieldNoteDateline.textContent = note.dateline;
+      fieldNoteTitle.textContent = note.title;
+      fieldNoteBody.innerHTML = '';
+      note.paragraphs.forEach(text => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = text;
+        fieldNoteBody.appendChild(paragraph);
       });
+      fieldNoteOverlay.classList.add('open');
+      fieldNoteOverlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('field-note-open');
+      fieldNoteClose.focus();
+    }
+
+    function closeFieldNote() {
+      fieldNoteOverlay.classList.remove('open');
+      fieldNoteOverlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('field-note-open');
+    }
+
+    document.querySelectorAll('[data-field-note]').forEach(trigger => {
+      trigger.addEventListener('click', () => openFieldNote(trigger.dataset.fieldNote));
     });
 
-    const closeModal = () => {
-      backdrop.classList.remove('open');
-      document.body.style.overflow = '';
-    };
-    closeBtn.addEventListener('click', closeModal);
-    backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    fieldNoteClose.addEventListener('click', closeFieldNote);
+    fieldNoteScrim.addEventListener('click', closeFieldNote);
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && fieldNoteOverlay.classList.contains('open')) {
+        closeFieldNote();
+      }
+    });
   </script>
 </body>
 </html>
