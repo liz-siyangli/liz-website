@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=work-person-polish-1">
+  <link rel="stylesheet" href="style.css?v=work-person-polish-2">
 </head>
 <body>
 
@@ -107,7 +107,7 @@
             To finish my Master's in Computer Science at Northeastern, I had to leave Good Humans and go back to school. Northeastern's San Jose campus made it possible to move to Stanford's campus and live with family at the same time. Leaving a startup is a real gear shift — at a company like that, staying current isn't something you have to try to do, the work forces it. As a student again, that external pressure disappears. I didn't let it matter. I kept building AI projects on my own, joined vibe coding workshops and AI classes on campus, and showed up to lectures and seminars every week.
           </p>
 
-          <div class="lecture-list reveal">
+          <div class="lecture-list reveal collapsed" id="lectureList">
             <button class="lecture-list-toggle" id="lectureToggle" aria-expanded="false">
               <span class="lecture-list-label" style="margin-bottom:0">Five I keep thinking about</span>
               <span class="lecture-toggle-icon">+</span>
@@ -286,11 +286,13 @@
     // Lecture list expand/collapse
     const lectureBtn = document.getElementById('lectureToggle');
     const lectureWrap = document.getElementById('lectureItemsWrap');
+    const lectureList = document.getElementById('lectureList');
     if (lectureBtn && lectureWrap) {
       lectureBtn.addEventListener('click', () => {
         const open = lectureWrap.classList.toggle('open');
         lectureBtn.setAttribute('aria-expanded', open);
         lectureBtn.querySelector('.lecture-toggle-icon').textContent = open ? '−' : '+';
+        lectureList?.classList.toggle('collapsed', !open);
       });
     }
   </script>
