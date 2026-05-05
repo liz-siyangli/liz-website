@@ -388,14 +388,16 @@ strong { font-weight: 500; }
   filter: brightness(0.8);
 }
 
-/* Placeholder gradients — replace with real photos later */
 .door-bg-story {
-  background: linear-gradient(155deg, #2a1a0e 0%, #1A1410 60%, #0d0a08 100%);
+  background-image:
+    linear-gradient(155deg, rgba(42,26,14,0.08), rgba(13,10,8,0.18)),
+    url('assets/images/door-work.png');
+  background-position: center;
 }
 .door-bg-identity {
   background-image:
-    linear-gradient(155deg, rgba(31,78,121,0.10), rgba(7,25,43,0.18)),
-    url('assets/images/the-person.png');
+    linear-gradient(155deg, rgba(31,78,121,0.08), rgba(7,25,43,0.16)),
+    url('assets/images/door-person.png');
   background-position: center;
 }
 
