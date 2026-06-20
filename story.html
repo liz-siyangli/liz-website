@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=work-person-polish-4">
+  <link rel="stylesheet" href="style.css?v=final-polish-2">
 </head>
 <body>
 
@@ -17,11 +17,7 @@
       <a href="index.html" class="nav-logo">Liz Li <span class="nav-logo-sub">(Siyang)</span></a>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="#experience">Work</a>
-        <a href="#stories">Stories</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
+        <a href="story.html">The Work</a>
         <a href="identity.html">The Person</a>
         <a href="#contact">Contact</a>
       </div>
@@ -31,11 +27,8 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="index.html" class="mobile-link">Home</a>
-      <a href="#experience" class="mobile-link">Work</a>
-      <a href="#stories" class="mobile-link">Stories</a>
-      <a href="#projects" class="mobile-link">Projects</a>
-      <a href="#skills" class="mobile-link">Skills</a>
-      <a href="#education" class="mobile-link">Education</a>
+      <a href="story.html" class="mobile-link">The Work</a>
+      <a href="identity.html" class="mobile-link">The Person</a>
       <a href="#contact" class="mobile-link">Contact</a>
     </div>
   </nav>
@@ -125,25 +118,8 @@
           <div class="story-screenshots-header">
             <p class="story-media-label">Content results · <a href="https://www.tiktok.com/@lucie_luv_" target="_blank" rel="noopener noreferrer" class="story-link">@lucie_luv_ on TikTok ↗</a></p>
           </div>
-          <div class="story-screenshots-grid">
-            <a href="assets/images/IMG_6620.JPG" target="_blank" rel="noopener noreferrer" class="screenshot-zoom screenshot-zoom-one" aria-label="Open original TikTok screenshot">
-              <img src="assets/images/IMG_6620.JPG" alt="TikTok video screenshot" class="story-screenshot-img">
-              <span class="view-callout callout-one-a" aria-hidden="true">153.9K</span>
-              <span class="view-callout callout-one-b" aria-hidden="true">482.2K</span>
-            </a>
-            <a href="assets/images/IMG_6621.JPG" target="_blank" rel="noopener noreferrer" class="screenshot-zoom screenshot-zoom-two" aria-label="Open original TikTok screenshot">
-              <img src="assets/images/IMG_6621.JPG" alt="TikTok video screenshot" class="story-screenshot-img">
-              <span class="view-callout callout-two-a" aria-hidden="true">850.8K</span>
-              <span class="view-callout callout-two-b" aria-hidden="true">492.6K</span>
-              <span class="view-callout callout-two-c" aria-hidden="true">558.9K</span>
-              <span class="view-callout callout-two-d" aria-hidden="true">428K</span>
-            </a>
-            <a href="assets/images/IMG_6622.JPG" target="_blank" rel="noopener noreferrer" class="screenshot-zoom screenshot-zoom-three" aria-label="Open original TikTok screenshot">
-              <img src="assets/images/IMG_6622.JPG" alt="TikTok video screenshot" class="story-screenshot-img">
-              <span class="view-callout callout-three-a" aria-hidden="true">155.9K</span>
-              <span class="view-callout callout-three-b" aria-hidden="true">262.1K</span>
-              <span class="view-callout callout-three-c" aria-hidden="true">182.2K</span>
-            </a>
+          <div class="story-screenshots-grid story-screenshots-single">
+            <img src="assets/images/content-results-lucie.jpg?v=3" alt="TikTok content results for @lucie_luv_" class="story-screenshot-img story-screenshot-composite">
           </div>
           <div class="content-results-summary">
             <p class="content-results-kicker">AI-assisted content pipeline</p>
@@ -407,15 +383,27 @@
     </div>
   </section>
 
+  <!-- NEXT: PERSON -->
+  <section class="bg-cream-dark work-to-person">
+    <div class="section-inner">
+      <a href="identity.html" class="next-person-card reveal" aria-label="Continue to The Person">
+        <span class="next-person-kicker">Continue the story</span>
+        <span class="next-person-title">
+          <span>The work makes</span>
+          <span>more sense</span>
+          <span>when you know</span>
+          <span>the person behind it.</span>
+        </span>
+        <span class="next-person-meta">Open The Person <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="bg-ink">
     <div class="section-inner">
       <p class="label label-gold reveal">Let's talk</p>
       <h2 class="contact-headline reveal">Open to the right<br><em>opportunity.</em></h2>
-      <p class="contact-sub reveal">
-        PM · Growth · AI Engineering · Product Ops · Implementation<br>
-        Full-time from May 2026 · Seattle, WA or Remote · No sponsorship required
-      </p>
       <div class="contact-cards contact-cards-four">
         <a href="mailto:liz.siyangli@gmail.com" class="contact-card reveal" style="--card-delay:0ms">
           <span class="contact-icon">✉</span>
@@ -457,19 +445,20 @@
         title: 'An urgent trip to a sold-out convention — and a single offhand comment that became a product.',
         paragraphs: [
           'By October 2025, Good Humans had moved fast. We had closed a round and were entering real production — not prototype, not lab, factory. Our manufacturing co-founder needed to fly to China to oversee the first production run in person. But before she left, we had a problem: we did not have enough direct user feedback to tell her what she would be asking the factory to build. The time window was under a week.',
-          'I found the right room: a Love and Deep Space fan event in New York — a birthday celebration for the character Xavier, the biggest gathering of its kind on the East Coast, drawing fans from Philly, Boston, up and down the coast. Vendor slots had been closed for months. I reached out anyway. Explained who we were, what we were building, why our presence would matter to the people in that room. We got added to a sold-out lineup.',
-          'For seven days I ran interviews everywhere — in the coffee queue before doors opened, on the show floor, in a private room I unlocked after buying the sign-in volunteer a coffee. Our manufacturing co-founder flew in. She sat across from the people who would become our first customers and got the direct answers she would be bringing to the factory.',
-          'In one of those conversations, a user mentioned she wanted her AI companion to wear matching outfits. I did not let it go. I heard variations of it again. I ran a Discord poll — the signal held. I brought it to the team formally. The co-founders pushed back: we are an AI startup from San Francisco, this feels too low-tech. I showed them the data. Matching Outfit launched.'
+          'The clearest chance was offline. I found it through research: a Love and Deep Space fan event in New York, a birthday celebration for Xavier, with fans coming from Philly, Boston, and up and down the coast. It was exactly the kind of room we needed, and the timing was rare. The only problem was that vendor slots had been closed for months. I reached out anyway, explained what we were building, and made the case for why we should be there. We got a spot.',
+          'Once I was there, I did not just stand behind a table. For seven days I ran interviews everywhere — in the coffee queue before doors opened, on the show floor, and in a private room I unlocked after buying the sign-in volunteer a coffee. I brought our manufacturing co-founder into those conversations so the person going to the factory could hear the users directly.',
+          'In one interview, a user mentioned she wanted her AI companion to wear matching outfits. I kept testing the idea on-site because the reaction felt different from casual feedback. People understood it immediately. When I brought it back, there was pushback: it sounded too physical, too low-tech, maybe not the kind of thing an AI startup should prioritize. But I had heard the signal in person, from the exact users we were trying to reach, so I did not want to drop it.',
+          'I then validated it again in our Discord community, which was close to 3,000 people at the time. The online poll matched what I had heard offline: existing users wanted it, and new users understood the product more easily through it. I used those two signals together to make the case to the founders. They approved it, we built it, and Matching Outfit became a real add-on: more than 70% of Batch 2 buyers purchased it with the device. It also gave new customers a simple entry point into a product that was otherwise hard to explain at first glance.'
         ]
       },
       sf: {
         dateline: 'San Francisco · December 2025',
         title: 'Funding Season. Fifteen days to build the pre-sale. Five minutes to sell out.',
         paragraphs: [
-          'December 9th. Pre-sale: December 24th. We were in the middle of Funding Season — investors were watching, and this launch would be part of the story they were evaluating. It needed to go well. Not just okay. Well.',
-          'I mapped out a full content calendar before touching the camera. Thirty videos in fifteen days — roughly two a day — each with a call to action calibrated to how many days remained before launch. I coordinated daily with our designer on countdown visuals. I synced with our manufacturing co-founder in China for the latest footage from the factory floor. And while doing all of that, I noticed no one had built the Sold Out page. I built it before anyone asked.',
-          'December 24th. San Francisco. 5pm PST. The office had lost power earlier that day. We drove through the rain looking for a cafe with wifi. Found one. Opened the backend. Watched. Five minutes. All 100 units gone. Discord exploded — thousands of messages in those same five minutes. People saying what they bought, what outfit they would pair it with, where they would put it in their apartment.',
-          'The investors saw the data that same night. That is what fifteen days of focused work looks like when the pressure is real and the stakes are clear.'
+          'December 9th. Pre-sale: December 24th. We were in the middle of funding season, and the launch mattered because it was one of the few places where we could show real customer demand instead of just explaining the product in a deck.',
+          'I made a simple plan: keep posting every day until launch, make the countdown easy to understand, and turn every piece of new factory footage into something users could react to. Over fifteen days, I made thirty videos, coordinated visuals with our designer, checked in with our manufacturing co-founder in China, and made sure the launch page and sold-out page were ready.',
+          'On December 24th, the office lost power before launch. We ended up going out in the rain to find a cafe with stable wifi. At 5pm, the pre-sale opened. Within five minutes, all 100 units were gone. Discord was moving fast at the same time, with people sharing what they bought and which outfits they wanted to pair with the device.',
+          'That night, we had something concrete to show investors: not just interest, but purchase behavior. The point was not that the launch looked dramatic. The point was that a small team had turned fifteen days of focused work into a result people could measure.'
         ]
       }
     };
